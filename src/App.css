@@ -52,7 +52,7 @@
 
 [data-theme="dark"] {
   --bg: black;
-  --text-color: black;
+  --text-color: grey;
   --btnbg: brown;
   --border:yellow;
   --formbg: white;
@@ -71,7 +71,7 @@
 form{
   width: 30%;
   padding: 30px;
-  border: 2px solid black;
+  border: none;
   box-shadow: 0 0 4px var(--border);
   display: flex;
   flex-direction: column;

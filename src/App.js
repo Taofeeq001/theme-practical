@@ -6,8 +6,10 @@ import { useState } from 'react';
 
 function App() {
   const [lightMode, setLightMode] = useState(false)
+  const [click, setClick] = useState(false)
 
   const handleLightMode = (e) =>{
+    setClick(!click)
     e.preventDefault();
     const newTheme = lightMode === 'light'? 'dark': 'light';
     setLightMode(newTheme)
@@ -19,9 +21,9 @@ function App() {
         <div>
           <button style={{backgroundColor:'transparent', border:'none'}} onClick={handleLightMode}>
             {
-              lightMode? <MdOutlineLightMode/> : <BsMoon/>
+              click? <MdOutlineLightMode/> : <BsMoon/>
             }
-          </button>
+        </button>
         </div>
         <h1>Login</h1>
         <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
